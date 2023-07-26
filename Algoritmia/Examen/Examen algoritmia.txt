@@ -1,0 +1,419 @@
+1. En hashing, decimos que una función de cálculo H provoca colisión entre dos claves k1 y k2 si:
+
+a.
+Se cumple que H(k1) > H(k2)
+
+b.
+La ubicación para las claves k1 y k2 generada por H es la misma
+
+c.
+Se cumple que H(k1) = H(k2)
+
+d.
+Las respuestas b y c son correctas
+Retroalimentación
+
+La respuesta correcta es: Las respuestas b y c son correctas
+
+
+2. ¿Cuál de las siguientes NO ES una técnica de hashing para resolver colisiones?
+
+a.
+Prueba cuadrática
+
+b.
+Prueba dispersa
+
+c.
+Prueba dependiente de clave
+
+d.
+Prueba lineal
+Retroalimentación
+
+La respuesta correcta es: Prueba dispersa
+
+
+3. ¿En qué técnica hashing para resolver colisiones usamos una lista?
+
+a.
+En la prueba cuadrática
+
+b.
+En la prueba dependiente de clave
+
+c.
+En el encadenamiento
+
+d.
+En ninguna: nunca usamos una lista para resolver colisiones por ser ineficiente.
+Retroalimentación
+
+La respuesta correcta es: En el encadenamiento
+
+
+4. ¿En qué tipo de problemas se suele aplicar la técnica de backtracking?
+
+a.
+Problemas de optimización
+
+b.
+Problemas de interpolación
+
+c.
+Problemas de decisión
+
+d.
+Las respuestas a y c son correctas
+Retroalimentación
+
+La respuesta correcta es: Las respuestas a y c son correctas
+
+5. En relación al resultado de la técnica de backtracking, podemos afirmar que...
+
+a.
+Es equivalente a hacer una búsqueda en profundidad del árbol de soluciones
+
+b.
+Es equivalente a hacer una búsqueda en anchura del árbol de soluciones
+
+c.
+Obtiene siempre la primera solución de entre todas las posibles
+
+d.
+Obtiene siempre una solución óptima
+Retroalimentación
+
+La respuesta correcta es: Es equivalente a hacer una búsqueda en profundidad del árbol de soluciones
+
+
+6. En relación a la complejidad del backtracking...
+
+a.
+Es una técnica muy eficiente, con complejidad lineal
+
+b.
+La complejidad es del orden de O(n log n)
+
+c.
+Es un algoritmo bastante ineficiente, con complejidad factorial o exponencial
+
+d.
+Ninguna de las anteriores es correcta
+Retroalimentación
+
+La respuesta correcta es: Es un algoritmo bastante ineficiente, con complejidad factorial o exponencial
+
+
+7. Dado el siguiente pseudocódigo para backtracking recursivo, indique qué falta en el hueco:
+
+función BTRec (salida solucion[1..n], int etapa)     // solucion es un vector de dimensión n
+   si (etapa > n) entonces return;
+   valores[1..m];                     // valores es un vector de dimensión m
+   iniciarValores(valores, etapa);
+   repetir
+      nuevoValor = seleccionarNuevoValor(valores);
+      si alcanzable(solucion, nuevoValor) entonces
+         solucion[etapa] = nuevoValor;
+         si [HUECO_A_RELLENAR] entonces
+            procesarSolucion(solucion);
+         sino
+            BTRec(solucion, etapa + 1);
+         finSI
+         solucion[etapa] = NULO;         // Se elimina nuevoValor de la solución
+      finSI
+   hasta ultimoValor(valores);
+fin fun
+
+
+
+a.
+esNodoInterno(nuevoValor)
+
+b.
+esSolucion(solucion)
+
+c.
+noEsSolucion(solucion)
+
+d.
+Ninguna es correcta.
+Retroalimentación
+
+La respuesta correcta es: esSolucion(solucion)
+
+
+8. ¿Qué algoritmo de ordenación también es conocido como "algoritmo de la baraja"?
+
+a.
+Selección directa
+
+b.
+Shell
+
+c.
+Inserción directa
+
+d.
+Burbuja
+Retroalimentación
+
+La respuesta correcta es: Inserción directa
+
+
+9. ¿En qué algoritmo de ordenación debemos elegir los intervalos de la secuencia siguiendo los criterios de Knuth para optimizar la eficiencia?
+
+a.
+Shell
+
+b.
+Bucket Sort
+
+c.
+Burbuja
+
+d.
+Quick Sort (ordenación rápida)
+Retroalimentación
+
+La respuesta correcta es: Shell
+
+
+10. ¿En qué algoritmo de ordenación se ordenan subsecuencias tomando en consideración no romper aquellas que ya estaban ordenadas?
+
+a.
+Mezcla directa
+
+b.
+Mezcla natural
+
+c.
+Ordenación por índice
+
+d.
+Bucket Sort
+Retroalimentación
+
+La respuesta correcta es: Mezcla natural
+
+
+
+11. ¿Cuál es la complejidad del algoritmo de búsqueda de patrones KMP (Knuth-Morris-Pratt) teniendo en cuenta el preprocesamiento del patrón?
+
+a.
+O(n·m)
+
+b.
+O(n)
+
+c.
+O(n+m)
+
+d.
+Ninguno de los anteriores
+Retroalimentación
+
+La respuesta correcta es: O(n+m)
+
+
+12. ¿Qué hace el algoritmo de búsqueda de patrones BMH (Boyer-Moore-Horspool) si encuentra una discrepancia al comparar el patrón con el texto?
+
+a.
+Desplaza el patrón para que comience a continuación del carácter discrepante (c), siempre que c no aparezca en el patrón
+
+b.
+Desplaza el patrón para alinear el carácter discrepante con la primera aparición del mismo en el patrón hacia la izquierda
+
+c.
+Desplaza el patrón para alinear el carácter discrepante con el último carácter del patrón y seguir la comparación
+
+d.
+Las respuestas a y b son correctas
+Retroalimentación
+
+La respuesta correcta es: Las respuestas a y b son correctas
+
+
+13. En los algoritmos de búsqueda de patrones BM (BMH, BMS)... ¿qué necesitamos para su implementación?
+
+a.
+Dos arrays de caracteres, c1 y c2, donde almacenamos la relación de caracteres que conforman el juego a utilizar y los que no lo integran
+
+b.
+Dos arrays de enteros, d1 y d2, usando el primero para las reglas A y el segundo para la regla B de desplazamiento
+
+c.
+Un array de enteros de tres dimensiones (cubo) para los desplazamientos calculados
+
+d.
+Las respuestas a y b son correctas
+Retroalimentación
+
+La respuesta correcta es: Dos arrays de enteros, d1 y d2, usando el primero para las reglas A y el segundo para la regla B de desplazamiento
+
+
+14. ¿De qué orden es la complejidad de la búsqueda binaria?
+
+a.
+O(n)
+
+b.
+O(log2 (n))
+
+c.
+O(n2)
+
+d.
+O(1)
+Retroalimentación
+
+La respuesta correcta es: O(log2 (n))
+
+
+
+15. ¿Cuándo decimos que un árbol AVL está balanceado?
+
+a.
+Cuando la altura de los subárboles de cualquier nodo del árbol difiere como máximo en 1
+
+b.
+Cuando para el Factor de Equilibrio (FE) se cumple que |FE| > 1
+
+c.
+Las respuestas a y b son correctas
+
+d.
+Ninguna respuesta es correcta
+Retroalimentación
+
+La respuesta correcta es: Cuando la altura de los subárboles de cualquier nodo del árbol difiere como máximo en 1
+
+
+16. Hashing (1,5 puntos)
+
+a. Enumera y describe brevemente las técnicas hashing para resolver colisiones que conozcas.
+
+b. Indica las ventajas y desventajas de las técnicas mencionadas
+
+c. Pon un ejemplo de aplicación de cada técnica enumerada.
+
+1. Prueba Lineal
+
+2. Dependiente de Clave
+
+3. Prueba cuadratica
+
+4. Encadenamiento
+
+
+
+En la prueba lineal es una tecnica hasing donde se inserta el dato en una posición, si no hay colisión lo inserta pero, en cuanto hay colisión se le suma uno a la variante i para ponerlo en otra posición. Ventajas es más sencillo, tiene menos complejidad, desventajas al sumar uno a la i pueden haber varios datos que se inserten en el mismo lugar por ser secuencial.
+
+
+
+En la prueba cuadratica es una tecnica hasing donde se inserta el dato en una posición, si no hay colisión lo inserta pero. en cuanto hay colisión el algoritmo le suma i^2 (i al cuadrado) para que se inserte de forma no lineal. Ventajas es sencillo, tiene menos complejidad aunque más que la prueba lineal, desventajas es que al realizar un calculo al cuadrado dicho cuadrado no puede ser mayor que la longitud de la lista donde se pretende insertar.
+
+
+
+En la dependiente de clave es una técnica hasing donde se inserta el dato en una posición, si no hay colisión lo inserta pero, en cuanto hay colisión el algoritmo le suma i+d (teniendo en cuanta que d es el dato dividido por el numero maximo de la lista) pudiendo insertar teniendo menos colisiones. Ventajas recorre mejor la tupla, no se quedan tantos huecos vacios, desventajas son que al realizar una división por la dependiente es más costoso de realizar, durá más tiempo.
+
+
+
+En la encadenamineto es una técnica hasing donde se inserta el dato en una posición, si no hay colisión lo inserta pero, en cuanto hay colisión el algoritmo crea una lista donde se inserta el dato delante del que ya estaba en esa posión teniendo una lista desde el más antiguo al más reciente de inserción. Las ventajas son que al haber colisión se soluciona facil y sus desventajas son que al crear una lista para buscar un dato necesitas recorrer la lista entrera y se pierde la eficacia de la resolución que buscas.
+
+ComentariosComentario:
+a) Técnicas colisiones: 10/10 (0,5 puntos)
+b) Ventajas/desventajas: 10/10 (0,5 puntos)
+c) Ejemplo de aplicación: 10/10 (0,5 puntos)
+
+
+
+17. Backtracking (2 puntos)
+
+a. Describe brevemente en qué consiste la estrategia de backtracking.
+
+b. Indica las aplicaciones este método.
+
+c. Enumera problemas clásicos que se abordan con esta estrategia. Habla sobre las diferentes variantes existentes en función de la solución o soluciones buscadas.
+
+d. Analiza las ventajas e inconvenientes de esta estrategia.
+
+
+La estrategia de backtracking consiste en resolver un problema cuando de otras maneras no hay solución, se encarga de resolver el problema de todas las formas posibles.
+
+
+
+Las aplicaciones de este metodo son el algoritmo de N-reinas como problemas de decisión y el de la mochila como problemas de optimización.
+
+
+
+1. Problemas de decisión donde esta el posicionamiento en un tablero en el que se pretenden insertar las diferentes reinas en cada fila y columna. Para este problema da varias soluciones, las soluciones las realiza en arbol donde se aprecia cuando llega a la solución y cuando no llega a la solución.
+
+2. Problemas de optimización en una mochila, en este problema da diferentes soluciones, consiste en poder guardar el máximo en la mochila con diferentes objetos de diferentes pesos teniendo un peso máximo. 
+
+
+
+Las ventajas del backtracking serían que al ser costosa lo resuelve y consigue obtener todas las soluciones posibles, sus desventajas son su complejidad, es muy costosa para resolver los problemas.
+
+ComentariosComentario:
+a) Descripción: 7/10 (0,28 puntos)
+b) Aplicaciones: 9/10 (0,36 puntos)
+c) Problemas clásicos: 7/10 (0,28 puntos)
+d) Variantes soluciones: 0/10 (0 puntos)
+e) Ventajas/desventajas: 10/10 (0,4 puntos)
+
+
+18. Algoritmos de clasificación (1,5 puntos)
+
+a. Describe brevemente al menos tres algoritmos de clasificación en memoria principal.
+
+b. Pon un ejemplo de aplicación de cada algoritmo mencionado.
+
+c. Analiza la complejidad de estos algoritmos.
+
+
+1. Quick sort (ordenación rápida)
+
+2. Metodo shell
+
+3. selección directa.
+
+
+
+En el método de ordenación rápida consiste en ordenar dado un pivote de mediana en ordenar la parte de la izquierda y la parte derecha del pivote de forma rápida.
+
+
+
+En el métido shell consiste en seleccionar de tres en tres hasta que se seleccionen todos, tendremos varias columnas de 3, primero se ordena la primera columna de 3 y se inserta en la siguiente, se vuelve a ordenar y se inserta en la siguiente, sigue todo este proceso hasta que llegan a estar todos ordenados en una sola columna.
+
+
+
+El método de selección directa consiste en seleccionar un pivote como mediana y intercambiarlo por el número del final, despúes se seleccionan primer número por la izquierda del pivote y el ultimo por la derecha del pivote si es mayor del pivote el numero de la izquierda se intercambia y así hasta tenerlo ordenados, por último se intercambian de nuevo el pivote y se ordenan por un quick sort para ordenarlo de menor a mayor.
+
+
+
+Para el método quick sort sería la aplicación para una lista con más de 20 elementos. complejidad sería o(n+m)
+
+Para el método shell sería la aplicación para una lista con mucha diferencia entre elementos. complejidad sería o(n^2)
+
+Para el método selección directa sería la aplicación para una lista de más de 1000 elementos. complejidad sería o(n*m)
+
+ComentariosComentario:
+a) Descripción: 10/10 (0,5 puntos)
+b) Aplicación: 10/10 (0,5 puntos)
+c) Complejidad: 10/10 (0,5 puntos)
+
+
+18. Algoritmos de búsqueda (2 puntos)
+
+a. Describe el funcionamiento de los árboles balanceados o AVL
+
+b. Indica las diferentes operaciones que soporta un árbol AVL y pon un ejemplo de cada una de ellas
+
+c. Detalla cómo se realiza la eliminación de un nodo en un árbol AVL, poniendo un ejemplo que lo ilustre en el que se produzca rebalanceo.
+
+d. Analiza la complejidad de AVL
+
+
+
+

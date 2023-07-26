@@ -1,0 +1,56 @@
+void intercambio(int a[], int i, int j) {
+     int interc;
+     
+     interc = a[i];
+     a[i] = a[j];
+     a[j] = interc;
+}
+
+/* a[] --> Vector de n�meros
+   ini --> Posicion inicial del vector
+   fin --> Posicion final del vector
+*/
+void QuickSort(int a[], int ini, int fin) {
+
+     int pivote;
+     int i,j;
+     
+     // Caso vector con 1 solo n�mero --> No hacer nada
+     if(ini >= fin) return;
+     
+     // Caso vector con 2 n�meros --> Comprobar si es necesario ordenarlos
+     if(ini+1 == fin){
+       if(a[ini] > a[fin])  // No est�n ordenados los dos n�meros, intercambiar
+           intercambio(a, ini, fin);
+       return;               
+     }
+  
+     // Resto de casos --> vector con 3 n�meros o m�s
+     
+     // Pivote --> La posici�n de mitad del vector
+     int medio = (ini+fin)/2;
+
+     // Intercambiar pivote por el �ltimo elemento
+     intercambio(a, medio, fin);
+     pivote=a[fin];
+ 
+     // empezamos la particion     
+     for(i=ini,j=fin-1;;){  
+        while((i <= fin-1) && (a[i]<pivote)) i++;  
+        while((j >= ini) && (pivote <a[j])) j--;
+
+        if(i<j){  // Todav�a no se han intercambiado los �ndices, intercambiar n�meros        
+            intercambio(a,i,j);
+            i++; j--;
+        }
+
+        else  // Se han intercambiando los �ndices, fin de la particion
+            break;
+     }           
+
+     //colocaci�n del pivote en su sitio
+     intercambio (a, i, fin);
+     //termina particion; //llamadas recursivas
+     QuickSort(a, ini, i-1);  // Vector de la izquierda del pivote
+     QuickSort(a, i+1, fin);  // Vector de la derecha del pivote
+}

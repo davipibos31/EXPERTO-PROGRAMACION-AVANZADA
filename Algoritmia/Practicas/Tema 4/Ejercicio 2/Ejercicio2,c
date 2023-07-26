@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <string.h>
+
+void preKMP(char *p, int size, int *tablaNext) {
+    int i, j;
+
+    i = 0;
+    j = tablaNext[0] = -1;
+
+    while (i < size - 1) {
+        while (j > -1 && p[i] != p[j]) {
+            j = tablaNext[j];
+        }
+        i++;
+        j++;
+        if (p[i] == p[j])
+            tablaNext[i] = tablaNext[j];
+        else
+            tablaNext[i] = j;
+    }
+}
+
+void KMPSearch(char *s, char *p, int *posiciones) {
+    int i, j, k;
+    int s_len, p_len;
+
+    p_len = strlen(p);
+    s_len = strlen(s);
+
+    int tablaNext[p_len];
+
+    preKMP(p, p_len, tablaNext);
+
+    i = j = k = 0;
+
+    while (i < s_len) {
+        while (j > -1 && s[i] != p[j]) {
+            j = tablaNext[j];
+        }
+
+        i++;
+        j++;
+
+        if (j >= p_len) {
+            posiciones[k] = i - j;
+k++;
+j = 0;
+}
+}
+}
+
+int main() {
+char texto[] = "ababcababcabc";
+char patron[] = "abc";
+int posiciones[100];
+KMPSearch(texto, patron, posiciones);
+
+printf("Posiciones encontradas:\n");
+for (int i = 0; i < 100; i++) {
+    if (posiciones[i] != -1) {
+        printf("%d ", posiciones[i]);
+    }
+}
+
+return 0;
+}
