@@ -1,0 +1,463 @@
+1. Al hablar de las GPUs como arquitecturas paralelas:
+
+a.
+Las GPUs hacen una implementación reducida del juego de instrucciones (ISA)
+
+b.
+Las CPUs hacen una implementación completa del juego de instrucciones (ISA)
+
+c.
+Las GPUs tienen muchos núcleos (cores) muy simples mientras que las CPUs tienen pocos núcleos muy complejos
+
+d.
+Todas las respuestas son correctas
+Retroalimentación
+
+La respuesta correcta es: Todas las respuestas son correctas
+
+
+2. ¿Qué significan las siglas SIMD?
+
+a.
+Simple Instruction Mono Data
+
+b.
+Single Instruction Multiple Data
+
+c.
+Single Instant Micro Data
+
+d.
+Siempre Intentar Multiplicar por Dos
+Retroalimentación
+
+La respuesta correcta es: Single Instruction Multiple Data
+
+3. ¿Qué es un FLOP?
+
+a.
+Fast Line Operation
+
+b.
+Un objeto de Java
+
+c.
+Una operación en coma flotante, basada en un tipo primitivo de C/C++
+
+d.
+Un tipo de bucle paralelo (For Loop)
+Retroalimentación
+
+La respuesta correcta es: Una operación en coma flotante, basada en un tipo primitivo de C/C++
+
+
+4. ¿Cómo mejora el rendimiento el procesamiento superescalar?
+
+a.
+Lanzando varias instrucciones de forma simultánea, de manera que pueden ejecutar diferentes etapas de forma solapada en un mismo ciclo de reloj
+
+b.
+Esperando hasta que acaba una instrucción para introducir en el pipeline la siguiente
+
+c.
+La técnica de segmentación no mejora el rendimiento
+
+d.
+Segmentando el código de un programa para que se ejecute en paralelo
+Retroalimentación
+
+La respuesta correcta es: Lanzando varias instrucciones de forma simultánea, de manera que pueden ejecutar diferentes etapas de forma solapada en un mismo ciclo de reloj
+
+
+5. ¿Cuál es la gran ventaja de los sistemas SIMD respecto a los MIMD?
+
+a.
+Necesitan menos hardware, ya que solo requieren una unidad de control
+
+b.
+Los sistemas SIMD son más independientes que los sistemas MIMD, pues ejecutan cada uno una copia del programa y del Sistema Operativo
+
+c.
+No hay diferencias destacables entre ambos sistemas
+
+d.
+Ninguna de las respuestas es correcta
+Retroalimentación
+
+La respuesta correcta es: Necesitan menos hardware, ya que solo requieren una unidad de control
+
+
+6. ¿Cuál es la principal característica de un sistema de memoria distribuida?
+
+a.
+Los nodos comparten físicamente la memoria y pueden acceder al mismo espacio de direcciones de la misma
+
+b.
+Los cambios realizados por un procesador en la memoria son visibles para el resto de procesadores del sistema de forma directa
+
+c.
+Cada nodo contiene su propio procesador y su propia memoria, comunicándose cada sistema entre sí por medio de paso de mensajes a través de una red de interconexión
+
+d.
+Se dividen en sistemas UMA y AMU
+Retroalimentación
+
+La respuesta correcta es: Cada nodo contiene su propio procesador y su propia memoria, comunicándose cada sistema entre sí por medio de paso de mensajes a través de una red de interconexión
+
+
+7. ¿Qué es la arquitectura CUDA?
+
+a.
+Una arquitectura de desarrollo de algoritmos basados en computación lineal no paralelizable
+
+b.
+Una arquitectura basada en multiprocesadores (SMs) compuestos por procesadores más sencillos (SPs)
+
+c.
+Una arquitectura de computación paralela basada en el uso de los cores de la CPU
+
+d.
+Una arquitectura de diseño basada en el uso de un único pipeline por cada núcleo de la CPU
+Retroalimentación
+
+La respuesta correcta es: Una arquitectura basada en multiprocesadores (SMs) compuestos por procesadores más sencillos (SPs)
+
+
+8. ¿Cuáles son las clasificaciones de las arquitecturas paralelas según la taxonomía de Flynn?
+
+a.
+SIMD y MIMD
+
+b.
+SISD y MISD
+
+c.
+SIMD, SISD, MIMD y MISD
+
+d.
+Secuencial, multinivel y heterogénea
+Retroalimentación
+
+La respuesta correcta es: SIMD, SISD, MIMD y MISD
+
+
+9. ¿Qué directiva de OpenMP forma un conjunto de hilos e inicia su ejecución en paralelo?
+
+a.
+#pragma omp parallel
+
+
+b.
+#pragma omp simd
+
+
+c.
+#pragma omp single
+
+
+d.
+#pragma omp task
+
+Retroalimentación
+
+La respuesta correcta es: #pragma omp parallel
+
+
+10. ¿Qué directiva de OpenMP nos garantiza el acceso a una determinada ubicación de almacenamiento de manera indivisible?
+
+a.
+#pragma omp simd
+
+
+b.
+#pragma omp single
+
+
+c.
+#pragma omp task
+
+
+d.
+#pragma omp atomic
+
+Retroalimentación
+
+La respuesta correcta es: #pragma omp atomic
+
+
+11. Un computador heterogéneo...
+
+a.
+Dispone de varios núcleos de la misma naturaleza
+
+b.
+Es muy poco habitual hoy en día. Sólo los encontramos en supercomputadores de CPDs de alto rendimiento
+
+c.
+Es muy habitual hoy en día, pues casi todos los equipos disponen de una CPU multicore y una GPU
+
+d.
+Sólo usa cientos o miles de núcleos sencillos ubicados en la GPU. Estos núcleos siempre usan memoria distribuida
+Retroalimentación
+
+La respuesta correcta es: Es muy habitual hoy en día, pues casi todos los equipos disponen de una CPU multicore y una GPU
+
+
+12. ¿Cuál es el lenguaje más popular en entornos heterogéneos?
+
+a.
+OpenMP
+
+b.
+Java
+
+c.
+CUDA de NVIDIA
+
+d.
+Ninguna respuesta es correcta
+Retroalimentación
+
+La respuesta correcta es: CUDA de NVIDIA
+
+
+13. En el paralelismo implícito
+
+a.
+El algoritmo debe especificar cómo cooperan los procesadores
+
+b.
+El compilador paraleliza el código de forma transparente al programador
+
+c.
+La tarea del compilador es muy sencilla
+
+d.
+El código generado es muy eficiente
+Retroalimentación
+
+La respuesta correcta es: El compilador paraleliza el código de forma transparente al programador
+
+
+14. ¿Qué hacen las barreras (#pragma omp barrier) en OpenMP?
+
+a.
+Establecen un punto de ruptura para ciertos hilos de ejecución
+
+b.
+Obligan a los hilos a detenerse hasta que todos alcancen la barrera
+
+c.
+Fuerzan la finalización del código secuencial
+
+d.
+Ninguna de las respuestas es correcta
+Retroalimentación
+
+La respuesta correcta es: Obligan a los hilos a detenerse hasta que todos alcancen la barrera
+
+
+15. ¿Qué funciones nos permiten gestionar la memoria en CUDA?
+
+a.
+cudaMalloc() y cudaFree()
+
+b.
+cudaMemCpy()
+
+c.
+Las respuestas a y b son correctas
+
+d.
+Ninguna respuesta es correcta
+Retroalimentación
+
+La respuesta correcta es: Las respuestas a y b son correctas
+
+
+16. OpenMP (1 punto)
+
+Convierta el siguiente programa secuencial en código paralelo con OpenMP:
+
+void main () {
+
+   double a[1000],b[1000],c[1000];
+
+   for(int i=0;i<1000;i++) {
+
+      a[i]=b[i]+c[i];
+
+   }
+
+}
+
+Puede utilizar el IDE que desee para realizar el desarrollo y como respuesta a esta pregunta debe subir un fichero con el código del programa desarrollado.
+
+#include <omp.h>
+
+int main() {
+   double a[1000], b[1000], c[1000];
+
+   #pragma omp parallel for
+   for(int i = 0; i < 1000; i++) {
+      a[i] = b[i] + c[i];
+   }
+
+   return 0;
+}
+
+Archivo ejercicio1.cu
+
+
+
+17. Gestión de memoria en CUDA (0,5 puntos)
+
+Complete las llamadas de gestión de memoria del siguiente código CUDA para realizar la suma de vectores:
+
+int main()
+{
+  // Reserva e inicializa memoria en la CPU
+  float *h_A = ___________, *h_B = ___________;
+    
+  // Reserva memoria en la GPU
+  float *d_A, *d_B, *d_C;
+  ______________
+
+
+  _________________
+
+  _________________
+
+
+   // Copia host memory en device
+
+  _________________
+
+  _________________
+
+
+   // Ejecuta el kernel en ceil(N/256) blocks de 256 threads cada uno
+   vecAdd<<<ceil(N/256), 256>>>(d_A, d_B, d_C, n);
+  _________________
+
+
+   // Libera memoria de la GPU
+  _________________
+
+   _________________________
+
+}
+
+
+Nota: Debe subir un fichero con el código como entregable de este ejercicio.
+
+#include <iostream>
+#include <cuda_runtime.h>
+
+int main()
+{
+  // Reserva e inicializa memoria en la CPU
+  float *h_A = new float[N], *h_B = new float[N];
+
+  // Reserva memoria en la GPU
+  float *d_A, *d_B, *d_C;
+  cudaMalloc((void**)&d_A, N * sizeof(float));
+  cudaMalloc((void**)&d_B, N * sizeof(float));
+  cudaMalloc((void**)&d_C, N * sizeof(float));
+
+  // Copia host memory en device
+  cudaMemcpy(d_A, h_A, N * sizeof(float), cudaMemcpyHostToDevice);
+  cudaMemcpy(d_B, h_B, N * sizeof(float), cudaMemcpyHostToDevice);
+
+  // Ejecuta el kernel en ceil(N/256) blocks de 256 threads cada uno
+  vecAdd<<<ceil(N/256.0), 256>>>(d_A, d_B, d_C, N);
+
+  // Copia el resultado de vuelta a la CPU
+  cudaMemcpy(h_C, d_C, N * sizeof(float), cudaMemcpyDeviceToHost);
+
+  // Libera memoria de la GPU
+  cudaFree(d_A);
+  cudaFree(d_B);
+  cudaFree(d_C);
+
+  // Libera memoria de la CPU
+  delete[] h_A;
+  delete[] h_B;
+
+  return 0;
+}
+
+
+Archivo ejercicio2.cu
+
+
+18. Hilos en CUDA (1 punto)
+
+a) Describa brevemente en qué consiste un CUDA Thread Block
+
+b) Enumere los tipos de memoria donde puede leer/escribir un hilo y la visibilidad de estos accesos
+
+
+a) Un CUDA Thread Block es un conjunto de hilos ejecutándose simultáneamente en un multiprocesador de una tarjeta gráfica compatible con CUDA. Cada bloque puede contener cientos o miles de hilos, y se organiza en una estructura tridimensional de dimensiones definidas por el programador. Cada bloque tiene sus propias variables compartidas y puede compartir información a través de la memoria compartida del multiprocesador.
+
+
+
+b) Los hilos en un CUDA Thread Block pueden leer y escribir en varios tipos de memoria. Estos incluyen:
+
+
+
+- Memoria global (Global memory): Es la memoria principal de la GPU y puede ser leída y escrita por todos los hilos. Tiene una mayor capacidad pero una latencia más alta.
+
+
+
+- Memoria compartida (shared memory): Es una memoria localizada en el multiprocesador, compartida por los hilos de un mismo bloque. Los hilos pueden leer y escribir en esta memoria y se utiliza para la comunicación y sincronización entre los hilos dentro de un bloque. Tiene una menor latencia y mayor ancho de banda en comparación con la memoria global.
+
+
+
+- Memoria local: Cada hilo tiene su propia memoria local, que es de acceso rápido pero de capacidad limitada. Los hilos pueden leer y escribir en su propia memoria local, pero no pueden acceder a la memoria local de otros hilos.
+
+
+
+- Registros: Cada hilo tiene su propio conjunto de registros, que se utilizan para almacenar variables locales y cálculos intermedios. Los registros son de acceso rápido pero tienen una capacidad muy limitada.
+
+
+
+- Memoria constante (Constant memory): Es una memoria de solo lectura que se utiliza para almacenar datos que se comparten entre todos los hilos. Los hilos pueden leer desde la memoria constante, pero no pueden escribir en ella.
+
+
+19. Tiling en CUDA (1 punto)
+
+a) Describa brevemente en qué consiste la estrategia de tiling
+
+b) Analice el número de hilos de cada thread block en los siguientes casos:
+
+   b.1) ANCHO_TILE = 16
+
+   b.2) ANCHO_TILE = 32
+
+c) ¿Qué función CUDA se usa para coordinar algoritmos que usan tiling?
+
+
+
+a) La estrategia de tiling consiste en dividir un problema grande en subproblemas más pequeños y resolverlos por separado, para luego combinar los resultados individuales en una única solución. En lugar de procesar todo el problema de una vez, se divide en bloques o "tiles" y se realiza el cálculo en paralelo en cada uno de ellos. Esta técnica es especialmente útil en computación paralela, donde se busca aprovechar al máximo los recursos disponibles y acelerar la ejecución de algoritmos.
+
+
+
+b) El número de hilos de cada thread block en la estrategia de tiling depende del tamaño del "tile" o bloque.
+
+
+
+   b.1) Si el ANCHO_TILE es 16, significa que el bloque tendrá 16 hilos en cada dimension (2D), lo que resulta en un total de 256 hilos (16 * 16) en el bloque.
+
+
+
+   b.2) Si el ANCHO_TILE es 32, entonces el bloque tendrá 32 hilos en cada dimension (2D), lo que da un total de 1024 hilos (32 * 32) en el bloque.
+
+
+
+c) La función CUDA que se utiliza para coordinar algoritmos que usan tiling es cudaMemcpy(). Esta función permite realizar copias de memoria desde y hacia la GPU, lo que facilita la transferencia de datos entre el host (CPU) y el device (GPU) en un patrón de tiling. Con cudaMemcpy() se pueden especificar los tamaños de los "tiles" y controlar la colocación de los datos en la memoria GPU de manera eficiente para realizar operaciones en paralelo.
+
+
+
+Tambíen esta la función __syncthreads() para sincronizar todos los hilos y no haber concurrencias en los datos.
+
