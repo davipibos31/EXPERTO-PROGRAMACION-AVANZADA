@@ -1,0 +1,27 @@
+1. (2 puntos) Responde a las siguiente preguntas de forma clara y concisa. Emplea el espacio de puntos que se deja para ello:
+
+a) (0.5 puntos) Explica la diferencia que existe entre los modos "w" y "a" para abrir un fichero con la función fopen().
+b) (0.5 puntos) Un programador desea crear una matriz dinámica que almacene números reales (float). El tamaño de dicha matriz (número de filas y columnas) se pregunta al usuario por pantalla. Escribe el código C que implementa la funcionalidad deseada.
+c) (1 punto) Un programador ha definido un array estático como int valores[100]. Escribe el código C necesario para recorrer el array y mostrar los valores por pantalla. Solo puedes ahcer uso de variables punteros y los operadores * y &.
+
+2. (4 puntos) Tomando como base una lista realice las siguiente operaciones:
+
+a) (1 punto) Insertar un nodo de la lista, con los apellidos de una persona, así como su DNI, pidiendo ambos datos al usuario por pantalla. (1 punto) Si se realiza al insercción ordenada por apellidos.
+b) (1 punto) Borrar un nodo de la lista pasando el DNI como parámetro. El usuario lo debe introducir por pantalla.
+c) (1 punto) Listar por pantalla el contenido de la lista.
+
+3. (2 puntos) Tomando como base el código de un arbol binario ordenado que figura en el campus virtual se deben realizar las siguientes operaciones:
+
+a) (1 punto) Modificar TODO código necesario para que el árbol almacene en lugar de un número entero, un NIF de una persona (23123123F) letra incluida y el apellido de esta. El código realizado debe pedir por teclado ambos datos.
+b) (1 punto) Lista por pantalla el contenido del árbol en orden previo.
+
+4. (2 puntos) Dado el siguiente grafo, aplicar el algoritmo de Dijkstra indicando tanto el camino más corto como la mínima distancia partiendo del nodo A y queriendo llegar al nodo B. Debe de quedar claro cómo se aplica el algoritmo, para ello se puede utilizar la misma tabla que se ha explicado en el material del tema correspondiente.
+
+(A) -> 9 -> (D)
+(A) -> 1 -> (S)
+(S) -> 5 -> (D)
+(S) -> 6 -> (H)
+(H) -> 4 -> (T)
+(T) -> 15 -> (D)
+(T) -> 8 -> (B)
+(D) -> 7 -> (B)

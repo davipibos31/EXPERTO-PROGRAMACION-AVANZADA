@@ -1,0 +1,9 @@
+1. a) El modo "w" y el modo "a" son dos opciones diferentes que puedes utilizar al abrir un archivo usando la función fopen() 
+en lenguaje C.
+
+El modo "w" (write): Cuando abres un archivo en modo "w", estás indicando que deseas crear un nuevo archivo o sobrescribir el
+contenido existente si el archivo ya existe. Si el archivo no existe, se creará automáticamente y al abrir el archivo en 
+modo "w", todos los datos existentes en el archivo se borrarán.
+
+El modo "a" (append): Al abrir un archivo en modo "a", estás indicando que deseas agregar nuevos datos al final del archivo 
+existente, sin sobrescribir su contenido. Si el archivo no existe, se creará automáticamente. 
